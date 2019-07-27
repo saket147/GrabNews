@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GrabNews</string>
+
+    <string name="retry">Retry</string>
+    <string name="headlines_error">An error occurred while loading the headlines</string>
+</resources>
