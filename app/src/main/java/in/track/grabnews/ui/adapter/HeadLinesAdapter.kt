@@ -4,12 +4,13 @@ import `in`.track.grabnews.R
 import `in`.track.grabnews.model.Article
 import `in`.track.grabnews.databinding.ItemHeadlineBinding
 import `in`.track.grabnews.ui.activity.WebViewActivity
+import `in`.track.grabnews.utils.Utils
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-
+import okhttp3.internal.Util
 
 
 class HeadLinesAdapter: RecyclerView.Adapter<HeadLinesAdapter.ViewHolder>() {
@@ -41,6 +42,7 @@ class HeadLinesAdapter: RecyclerView.Adapter<HeadLinesAdapter.ViewHolder>() {
 
     class ViewHolder(private val binding: ItemHeadlineBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(article: Article){
+            article.publishedAt = Utils.convertTime(article.publishedAt)
             binding.articles = article
         }
     }
