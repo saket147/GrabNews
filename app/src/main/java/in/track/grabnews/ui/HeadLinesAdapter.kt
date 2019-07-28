@@ -24,7 +24,7 @@ class HeadLinesAdapter: RecyclerView.Adapter<HeadLinesAdapter.ViewHolder>() {
         holder.bind(articleList[position])
         holder.itemView.setOnClickListener{
             val intent = Intent(holder.itemView.context, WebViewActivity::class.java)
-            intent.putExtra("article", articleList[position])
+            intent.putExtra("url", articleList[position].url)
             holder.itemView.context.startActivity(intent)
         }
     }

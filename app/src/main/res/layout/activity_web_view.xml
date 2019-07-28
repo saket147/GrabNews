@@ -7,8 +7,8 @@
     <data>
         
         <variable
-            name="articles"
-            type="in.track.grabnews.model.Article" />
+            name="viewModel"
+            type="in.track.grabnews.ui.WebViewViewModal" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,14 +16,26 @@
         android:layout_height="match_parent"
         tools:context=".ui.WebViewActivity">
 
+
+
         <WebView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:webUrl="@{articles.url}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/webView"
+            app:webUrl="@{viewModel.pageUrl}"
+            app:setWebViewClient="@{viewModel.getWebViewClient()}"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:mutableVisibility="@{viewModel.getLoadingVisibility()}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     

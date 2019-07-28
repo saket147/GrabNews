@@ -6,6 +6,9 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface HeadlinesApi {
+
+    //endpoint call
+    //observable return type
     @GET("top-headlines")
     fun getHeadlines(@Query("country") country: String): Observable<TopHeadlines>
 }

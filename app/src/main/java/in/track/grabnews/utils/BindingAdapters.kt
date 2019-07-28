@@ -14,6 +14,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import android.webkit.WebViewClient
+
+
 
 @BindingAdapter("mutableVisibility")
 fun setMutableVisibility(view: View, visibility: MutableLiveData<Int>?) {
@@ -45,6 +48,11 @@ fun setImageUrl(view: ImageView, url: String?) {
                 RoundedCorners(20)
             ).into(view)
     }
+}
+
+@BindingAdapter("setWebViewClient")
+fun setWebViewClient(view: WebView, client: WebViewClient) {
+    view.webViewClient = client
 }
 
 @BindingAdapter("webUrl")

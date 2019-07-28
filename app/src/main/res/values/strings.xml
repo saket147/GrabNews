@@ -3,4 +3,6 @@
 
     <string name="retry">Retry</string>
     <string name="headlines_error">An error occurred while loading the headlines</string>
+    <string name="website_loading_error">An error occurred while loading the page</string>
+    <string name="ok">Okay</string>
 </resources>
