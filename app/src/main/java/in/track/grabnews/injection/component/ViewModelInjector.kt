@@ -1,6 +1,6 @@
 package `in`.track.grabnews.injection.component
 
-import `in`.track.grabnews.ui.HeadlinesViewModel
+import `in`.track.grabnews.ui.viewModel.HeadlinesViewModel
 import `in`.track.grabnews.injection.module.NetworkModule
 import dagger.Component
 import javax.inject.Singleton

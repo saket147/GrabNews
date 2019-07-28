@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="in.track.grabnews.ui.HeadlinesViewModel" />
+            type="in.track.grabnews.ui.viewModel.HeadlinesViewModel" />
     </data>
 
 
@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorLightGrey"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.activity.MainActivity">
 
         <ProgressBar
             android:layout_width="wrap_content"

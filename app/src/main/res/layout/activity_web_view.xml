@@ -8,13 +8,13 @@
         
         <variable
             name="viewModel"
-            type="in.track.grabnews.ui.WebViewViewModal" />
+            type="in.track.grabnews.ui.viewModel.WebViewViewModal" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.WebViewActivity">
+        tools:context=".ui.activity.WebViewActivity">
 
 
 

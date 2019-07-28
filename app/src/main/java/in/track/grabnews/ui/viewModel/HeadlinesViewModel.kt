@@ -1,10 +1,11 @@
-package `in`.track.grabnews.ui
+package `in`.track.grabnews.ui.viewModel
 
 import `in`.track.grabnews.model.Article
 import `in`.track.grabnews.network.HeadlinesApi
 import `in`.track.grabnews.R
 import `in`.track.grabnews.base.BaseViewModel
 import `in`.track.grabnews.model.HeadLinesDao
+import `in`.track.grabnews.ui.adapter.HeadLinesAdapter
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import io.reactivex.Observable
@@ -17,7 +18,8 @@ class HeadlinesViewModel(private val headLinesDao: HeadLinesDao) : BaseViewModel
 
     val loadingVisibility: MutableLiveData<Int> = MutableLiveData()
     val errorMessages: MutableLiveData<Int> = MutableLiveData()
-    val headLinesAdapter: HeadLinesAdapter = HeadLinesAdapter()
+    val headLinesAdapter: HeadLinesAdapter =
+        HeadLinesAdapter()
 
     val errorClickListener = View.OnClickListener {
         loadingVisibility.value = View.VISIBLE
@@ -32,6 +34,11 @@ class HeadlinesViewModel(private val headLinesDao: HeadLinesDao) : BaseViewModel
     lateinit var headlinesApi: HeadlinesApi
 
     private lateinit var subscriptons: Disposable
+
+
+    //fetching data from api
+    //fetching data from db
+
 
     private fun loadHeadlines() {
         subscriptons = Observable.fromCallable { headLinesDao.headlinesList }

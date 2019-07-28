@@ -1,8 +1,6 @@
 package `in`.track.grabnews
 
-import `in`.track.grabnews.model.HeadLinesDao
 import org.junit.Test
-
 import org.junit.Assert.*
 
 /**

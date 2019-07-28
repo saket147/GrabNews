@@ -1,8 +1,8 @@
 package `in`.track.grabnews.injection
 
 import `in`.track.grabnews.database.AppDatabase
-import `in`.track.grabnews.ui.HeadlinesViewModel
-import `in`.track.grabnews.ui.WebViewViewModal
+import `in`.track.grabnews.ui.viewModel.HeadlinesViewModel
+import `in`.track.grabnews.ui.viewModel.WebViewViewModal
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -1,8 +1,9 @@
-package `in`.track.grabnews.ui
+package `in`.track.grabnews.ui.activity
 
 import `in`.track.grabnews.R
 import `in`.track.grabnews.databinding.ActivityMainBinding
 import `in`.track.grabnews.injection.ViewModelFactory
+import `in`.track.grabnews.ui.viewModel.HeadlinesViewModel
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.annotation.StringRes
@@ -24,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.headlinesList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
-        headlinesViewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(HeadlinesViewModel::class.java)
+        headlinesViewModel = ViewModelProviders.of(this, ViewModelFactory(this)).get(
+            HeadlinesViewModel::class.java)
         binding.viewModel = headlinesViewModel
 
         headlinesViewModel.errorMessages.observe(this, Observer {
