@@ -1,7 +1,6 @@
 package `in`.track.grabnews.model
 
 import androidx.room.*
-import java.io.Serializable
 
 data class TopHeadlines (
     val id: Int,

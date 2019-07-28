@@ -15,8 +15,8 @@ class ViewModelFactory(activity: AppCompatActivity): ViewModelProvider.Factory{
     private var url: String? = null
     private val db = Room.databaseBuilder(activity.applicationContext, AppDatabase::class.java, "headline").build()
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        @Suppress("UNCHECKED_CAST")
         if (modelClass.isAssignableFrom(HeadlinesViewModel::class.java)) {
-            @Suppress("UNCHECKED_CAST")
             return HeadlinesViewModel(db.headlinesDao()) as T
         }
 

@@ -12,4 +12,7 @@ interface HeadLinesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(articles:List<Article>)
+
+    @Query("delete from Article")
+    fun nukeTable()
 }
